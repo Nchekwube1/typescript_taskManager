@@ -1,0 +1,120 @@
+@import "./variables";
+@import "./mixins";
+@import "./keyframes";
+.body {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background-color: transparent;
+  & .plus {
+    position: relative;
+    width: 100%;
+    height: 7rem;
+    & .img {
+      padding-left: 1rem;
+      @include flex;
+      justify-content: flex-start;
+      width: 30%;
+      border-radius: 0.5rem;
+      margin-left: 2rem;
+      height: 80%;
+
+      & img {
+        position: relative;
+        width: 4rem;
+        cursor: pointer;
+        // animation: pulse 1s linear infinite;
+        // animation-delay: 5s;
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  & .main {
+    position: relative;
+    width: 100%;
+    @include flex;
+    flex-direction: column;
+    padding-top: 4rem;
+    & .single {
+      position: relative;
+      width: 40%;
+      height: 5rem;
+      background-color: $theme4;
+      //   border: 2px solid $theme6;
+      border-radius: 0.6rem;
+      box-shadow: 2px 2px 6px $theme6;
+      @include flex;
+      & .items {
+        position: absolute;
+        right: -20rem;
+        bottom: -13rem;
+        width: 25rem;
+        // height: 6rem;
+        background-color: $theme4;
+        border: 2px solid $theme6;
+        border-radius: 0.6rem;
+        box-shadow: 2px 2px 6px $theme6;
+        z-index: 100;
+        & div {
+          position: relative;
+          width: 100%;
+          height: 4rem;
+          @include flex;
+          cursor: pointer;
+          &:hover {
+            background-color: $theme6;
+          }
+          & .img {
+            position: relative;
+            width: 17%;
+            height: 100%;
+            & img {
+              position: relative;
+              height: 65%;
+            }
+          }
+          & .txt {
+            position: relative;
+            width: 83%;
+            height: 100%;
+            @include flex;
+            justify-content: flex-start;
+            & h1 {
+              font-family: "Rubik-Light";
+              font-size: 1.7rem;
+              text-transform: capitalize;
+            }
+          }
+        }
+      }
+      & .txt {
+        position: relative;
+        width: 90%;
+        height: 100%;
+        @include flex;
+        justify-content: flex-start;
+        text-indent: 0.8rem;
+        & h1 {
+          font-family: "Poppins-Light";
+          font-size: 1.8rem;
+          text-transform: capitalize;
+        }
+      }
+      & .dots {
+        position: relative;
+        width: 10%;
+        height: 100%;
+        @include flex;
+        background-color: $theme6;
+        border-radius: 0.6rem;
+        & img {
+          position: relative;
+          height: 35%;
+          //   width: 60%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

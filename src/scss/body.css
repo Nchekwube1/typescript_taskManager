@@ -1,0 +1,217 @@
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1) rotate(45deg);
+            transform: scale(1.1) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: scale(0.9) rotate(45deg);
+            transform: scale(0.9) rotate(45deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale(1.1) rotate(45deg);
+            transform: scale(1.1) rotate(45deg);
+  }
+  100% {
+    -webkit-transform: scale(0.9) rotate(45deg);
+            transform: scale(0.9) rotate(45deg);
+  }
+}
+
+.body {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  background-color: transparent;
+}
+
+.body .plus {
+  position: relative;
+  width: 100%;
+  height: 7rem;
+}
+
+.body .plus .img {
+  padding-left: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 30%;
+  border-radius: 0.5rem;
+  margin-left: 2rem;
+  height: 80%;
+}
+
+.body .plus .img img {
+  position: relative;
+  width: 4rem;
+  cursor: pointer;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.body .main {
+  position: relative;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 4rem;
+}
+
+.body .main .single {
+  position: relative;
+  width: 40%;
+  height: 5rem;
+  background-color: #c0e0d0;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 2px 2px 6px #88c8a8;
+          box-shadow: 2px 2px 6px #88c8a8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.body .main .single .items {
+  position: absolute;
+  right: -20rem;
+  bottom: -13rem;
+  width: 25rem;
+  background-color: #c0e0d0;
+  border: 2px solid #88c8a8;
+  border-radius: 0.6rem;
+  -webkit-box-shadow: 2px 2px 6px #88c8a8;
+          box-shadow: 2px 2px 6px #88c8a8;
+  z-index: 100;
+}
+
+.body .main .single .items div {
+  position: relative;
+  width: 100%;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.body .main .single .items div:hover {
+  background-color: #88c8a8;
+}
+
+.body .main .single .items div .img {
+  position: relative;
+  width: 17%;
+  height: 100%;
+}
+
+.body .main .single .items div .img img {
+  position: relative;
+  height: 65%;
+}
+
+.body .main .single .items div .txt {
+  position: relative;
+  width: 83%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.body .main .single .items div .txt h1 {
+  font-family: "Rubik-Light";
+  font-size: 1.7rem;
+  text-transform: capitalize;
+}
+
+.body .main .single .txt {
+  position: relative;
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-indent: 0.8rem;
+}
+
+.body .main .single .txt h1 {
+  font-family: "Poppins-Light";
+  font-size: 1.8rem;
+  text-transform: capitalize;
+}
+
+.body .main .single .dots {
+  position: relative;
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #88c8a8;
+  border-radius: 0.6rem;
+}
+
+.body .main .single .dots img {
+  position: relative;
+  height: 35%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=body.css.map */
