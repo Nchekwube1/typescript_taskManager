@@ -1,6 +1,8 @@
 import check from "./icons/check.png"
 import del from "./icons/delete.png"
 import edit from "./icons/edit.png"
+import {globalState} from "./global"
+import { useContext } from "react"
 function Items() {
     return (
           <div className="items">

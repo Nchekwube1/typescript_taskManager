@@ -1,24 +1,31 @@
 import cancel from "./icons/cancel.svg"
-import menu from "./icons/menu.svg"
-import Items from "./Items"
+import Single from "./Single"
+import {globalState} from "./global"
+import { useContext } from "react"
+import { todo } from "./Initial"
 import "./scss/body.css"
 import Add from "./Add"
 function Body() {
+    const {isModal, setIsModal,list,setList,template} = useContext(globalState)
     return (
         <div className="body">
-      {/* <Add/> */}
+            {isModal ? <Add/> : null}
             <div className="plus">
               <div className="img">
-           <img src={cancel} alt="add todo" />
+           <img src={cancel} alt="add todo" onClick={()=>{
+               setIsModal(true) 
+               setList(false)}}  />
               </div>
             </div>
             <div className="main">
-                <div className="single">
-                    <div className="txt"><h1>wash the dishes</h1></div>
-                    <div className="dots"><img src={menu} alt="menu for each todo" /></div>
-                 <Items/>
-                       
-                </div>
+
+                {template.map((each:todo)=>{
+                    return (
+                    <Single id={each.id} todo={each.todo} />
+                    )
+                })}
+                                     
+                
             </div>
         </div>
     )
