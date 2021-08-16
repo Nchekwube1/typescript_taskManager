@@ -1,6 +1,6 @@
 import "./scss/add.css"
 import cancel from "./icons/cancel.svg"
-import {globalState} from "./global"
+import {globalState, gstate} from "./global"
 import { useContext } from "react"
 function Add() {
     function random():string{
@@ -12,12 +12,11 @@ function Add() {
 
      return ran
     }
-    const { setIsModal, todo,setTodo, template} = useContext(globalState)
+    const { setIsModal, todo,setTodo, template} = useContext(globalState) as gstate
     const handleSubmit = (e:any)=>{
         e.preventDefault()
         let one = {todo, id : random()}
         template.push(one)
-        console.log(template)
         setTodo("")
     }
     return (

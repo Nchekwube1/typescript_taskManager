@@ -47,6 +47,17 @@
       border-radius: 0.6rem;
       box-shadow: 2px 2px 6px $theme6;
       @include flex;
+      &.completed {
+        & .text {
+          & h1 {
+            font-family: "Poppins-Light";
+            font-size: 1.6rem;
+            text-transform: capitalize;
+            color: rgb(83, 82, 82);
+            text-decoration: line-through;
+          }
+        }
+      }
       & .items {
         position: absolute;
         right: -20rem;

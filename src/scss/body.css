@@ -101,6 +101,14 @@
           align-items: center;
 }
 
+.body .main .single.completed .text h1 {
+  font-family: "Poppins-Light";
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  color: #535252;
+  text-decoration: line-through;
+}
+
 .body .main .single .items {
   position: absolute;
   right: -20rem;
