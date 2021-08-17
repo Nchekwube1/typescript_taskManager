@@ -1,12 +1,18 @@
 import cancel from "./icons/cancel.svg"
 import Single from "./Single"
 import {globalState, gstate} from "./global"
-import { useContext } from "react"
+import { useContext,useEffect } from "react"
 import { todo } from "./global"
 import "./scss/body.css"
 import Add from "./Add"
 function Body() {
-    const {isModal, setIsModal,template} = useContext(globalState) as gstate
+    const {isModal, setIsModal,template,setTemplate} = useContext(globalState) as gstate
+     useEffect(()=>{
+     let item = localStorage.getItem("todo")
+     if(item){
+         setTemplate(JSON.parse(item))
+     }
+    },[])
     return (
         <div className="body">
             {isModal ? <Add/> : null}

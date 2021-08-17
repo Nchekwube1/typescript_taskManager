@@ -17,7 +17,11 @@ function Add() {
         e.preventDefault()
         let one = {todo, id : random()}
         template.push(one)
-        setTodo("")
+        setTodo("");
+        (function setter(){
+     localStorage.setItem("todo",JSON.stringify(template))
+
+    })()
     }
     return (
        <div className="modal">

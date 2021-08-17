@@ -19,7 +19,11 @@ function Items({completed,setCompleted,id,setList}:any) {
         setTemplate(newArr)
         setIsModal(true)
         setTodo(editArr[0].todo)
-        setList(false)
+        setList(false);
+          (function setter(){
+     localStorage.setItem("todo",JSON.stringify(template))
+
+    })()
          
     }
       const handleDelete = (iden:string)=>{
@@ -29,7 +33,11 @@ function Items({completed,setCompleted,id,setList}:any) {
 
         })
         setTemplate(newArr)
-        setList(false)
+        setList(false);
+          (function setter(){
+     localStorage.setItem("todo",JSON.stringify(template))
+
+    })()
          
     }
 
