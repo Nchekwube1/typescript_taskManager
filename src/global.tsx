@@ -2,7 +2,8 @@ import { FC } from "react"
 import { useState, createContext } from "react"
 export interface todo {
   todo:string,
-  id:string
+  id:string,
+  _id:string
 }
 export interface gstate{
     template: todo[];

@@ -1,5 +1,6 @@
 import cancel from "./icons/cancel.svg"
 import Single from "./Single"
+import axios  from "axios"
 import {globalState, gstate} from "./global"
 import { useContext,useEffect } from "react"
 import { todo } from "./global"
@@ -8,10 +9,11 @@ import Add from "./Add"
 function Body() {
     const {isModal, setIsModal,template,setTemplate} = useContext(globalState) as gstate
      useEffect(()=>{
-     let item = localStorage.getItem("todo")
-     if(item){
-         setTemplate(JSON.parse(item))
-     }
+         axios.get<todo[]>("http://localhost:4500/todo").then(data=>{
+             console.log(data)
+             setTemplate(data.data)
+         })
+    
     },[])
     return (
         <div className="body">
@@ -27,7 +29,7 @@ function Body() {
 
                 {template.map((each:todo)=>{
                     return (
-                    <Single id={each.id} todo={each.todo} key={each.id}  />
+                    <Single id={each.id} todo={each.todo} _id={each._id}key={each.id}  />
                     )
                 })}
                                      

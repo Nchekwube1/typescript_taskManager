@@ -4,7 +4,7 @@ import menu from "./icons/menu.svg"
 import Items from "./Items"
 
 
-function Single(   {id,todo}:todo ) {
+function Single(   {id,todo,_id}:todo ) {
     const [list,setList]= useState<boolean>(false)
     const [completed,setCompleted]= useState<boolean>(false)
     

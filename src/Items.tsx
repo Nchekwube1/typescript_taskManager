@@ -4,6 +4,7 @@ import edit from "./icons/edit.png"
 import {globalState, gstate} from "./global"
 import {todo} from "./global"
 import { useContext } from "react"
+import axios from "axios"
 function Items({completed,setCompleted,id,setList}:any) {
     const {setIsModal,setTodo,template,setTemplate} = useContext(globalState) as gstate
       const handleEdit = (iden:string)=>{
@@ -27,17 +28,19 @@ function Items({completed,setCompleted,id,setList}:any) {
          
     }
       const handleDelete = (iden:string)=>{
+        axios.post("http://localhost:4500/del", iden).then(data=> console.log(data));
+       
     
-        const newArr = template.filter((one:todo)=>{
-                      return one.id !== iden
+    //     const newArr = template.filter((one:todo)=>{
+    //                   return one.id !== iden
 
-        })
-        setTemplate(newArr)
-        setList(false);
-          (function setter(){
-     localStorage.setItem("todo",JSON.stringify(template))
+    //     })
+    //     setTemplate(newArr)
+    //     setList(false);
+    //       (function setter(){
+    //  localStorage.setItem("todo",JSON.stringify(template))
 
-    })()
+    // })()
          
     }
 
