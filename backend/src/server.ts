@@ -3,6 +3,7 @@ import  express from "express"
 import Add from "./Router/add"
 import get from "./Router/get"
 import del from "./Router/delete"
+import edit from "./Router/edit"
 const cors =  require("cors")
 const app =express()
 
@@ -20,6 +21,7 @@ app.use(cors())
 app.use('/',Add)
 app.use('/',get)
 app.use('/',del)
+app.use('/',edit)
 
 
 app.listen(4500,()=> console.log("Listening on port 4500") )

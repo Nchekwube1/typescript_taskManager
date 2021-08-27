@@ -1,6 +1,11 @@
 import mongoose  from "mongoose"
+interface Todo {
+    _id:string;
+    id:string;
+    todo:string
+}
 
-const boilerplate = new mongoose.Schema({
+const boilerplate = new mongoose.Schema<Todo>({
     _id:{
    type: mongoose.Types.ObjectId
     },
@@ -14,4 +19,6 @@ const boilerplate = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("todo", boilerplate)
+ const scheme:mongoose.Model<Todo> = mongoose.model("todo", boilerplate)
+
+ export default scheme

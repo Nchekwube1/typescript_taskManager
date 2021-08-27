@@ -1,24 +1,21 @@
 import express ,{ Request, Response } from 'express'
-import mongoose from "mongoose"
 import boilerplate from "../models"
 
 const Router = express.Router()
 
 Router.post("/del",async (req:Request,res:Response)=>{
-if(req.body.id === ""){
+if(req.body.iden === ""){
     res.status(300).send("Invalid request")
 }
 else{
         try{
-       boilerplate.deleteOne({id:req.body.id}, (err)=>{
-          if(err){
-        res.status(400).send("An error occured")
-              
-          }
-          else{
-              res.status(200).send("User deleted successfully")
-          }
+          await boilerplate.deleteOne({id:req.body.iden}).then(id=>{
+             res.status(200)
+             res.redirect("http://localhost:4500/todo")
+       }).catch(err=>{
+           res.status(302).send(err)
        })
+     
     }
     catch(err){
         res.status(400).send("An error occured")
