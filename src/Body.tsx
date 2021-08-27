@@ -10,7 +10,6 @@ function Body() {
     const {isModal, setIsModal,template,setTemplate} = useContext(globalState) as gstate
      useEffect(()=>{
          axios.get<todo[]>("http://localhost:4500/todo").then(data=>{
-             console.log(data)
              setTemplate(data.data)
          })
     
